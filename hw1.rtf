@@ -15,6 +15,7 @@ SQL Queries 1\
 
 \f1\fs26 \cf0 SELECT * \
 FROM Customers;\
+-- When you need to select all from the data you need to select * so you can get all of the of the data from the customers table.\
 \
 2. \
 \
@@ -22,47 +23,55 @@ FROM Customers;\
 \cf2 \cb3 SELECT name, city\
 FROM Agents\
 WHERE name = 'Smith';\
+--You must select the name and city column. from the Agents table. Than you must set a restraint telling it where  it is located. \
 \
 3. \
 SELECT pid, name, quantity\
 FROM Products\
 WHERE priceUSD > '1.25';\
+--Select the column where to access it on the table. Than you must set the restraint to make it less than 1.25\
 \
 4.\
 SELECT ordno, aid\
 FROM Orders;\
+--Select the ordno and aid from the Orders table. \
+\
 \
 5.\
 SELECT name, city\
-FROM Customers;\
+FROM Customers\
 WHERE city != 'Dallas';\
+--Select name and city from the customers table. You need to set the restraint not equal to Dallas because the directions tell us that it can not equal dallas. \
 \
 6. \
 SELECT name,\
 FROM Agents\
 WHERE city='New York' OR city='Newark';\
+--The restraint is where because you must list all the names of the agents, which you get from the agents table. Than you must set the restraint from New York or Newark. \
 \
 \
 7. \
 SELECT * \
 FROM Products\
-WHERE city != 'New York' or city != 'Newark' AND priceUSD <= '1.00'\
-\
+WHERE city != 'New York' or city != 'Newark' AND priceUSD <= '1.00';\
+--Must access it from products table and set a restraint where it can not equal new york or new wark and it has to be less than or equal to 1.00. \
 \
 8.\
 SELECT * \
 FROM Orders;\
 WHERE mon= 'jan', 'mar';\
+--Access all the orders from the orders table where month equals jan and march. \
 \
 9.\
 SELECT * \
 FROM Orders;\
 WHERE mon = 'feb' AND dollars <= '100.00';\
+--Must access the orders from the orders table than you must put a restraint on where feb is less than or equal to 100 dollars. \
 \
 10.\
 SELECT ordno\
 FROM Orders\
 WHERE cid='c005';\
-\
+--Example of the associate table, because the customers may have other orders where you must access from the Orders table however the cid is located in the customers table, because of there relationship. \
 \
 }
